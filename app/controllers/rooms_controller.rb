@@ -3,17 +3,17 @@ class RoomsController < ApplicationController
   before_action :set_room, only: [:edit, :update, :destroy]
 
   def index
-    # O método #map, de coleções, retornará um novo Array
-    # contendo o resultado do bloco. Dessa forma, para cada quarto,
-    # retornaremos o presenter equivalente
-    @rooms = Room.most_recent.map do |room|
-      # Não exibiremos o formulário na listagem
+    @search_query = params[:q]
+    
+    room = Room.search @search_query
+
+    @rooms = room.most_recent.map do |room|
       RoomPresenter.new room, self, false
     end
   end
 
   def show
-    room_model = Room.find params[:id]
+    room_model = Room.friendly.find params[:id]
     @room = RoomPresenter.new room_model, self
   end
 
@@ -30,7 +30,7 @@ class RoomsController < ApplicationController
     if @room.save
       redirect_to @room, notice: t('flash.notice.room_created')
     else
-      render :new 
+      render action: :new 
     end
   end
 
@@ -47,7 +47,7 @@ class RoomsController < ApplicationController
 
   private
     def set_room
-      @room = current_user.rooms.find params[:id]
+      @room = current_user.rooms.friendly.find params[:id]
     end
 
     def room_params

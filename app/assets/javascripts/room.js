@@ -1,6 +1,6 @@
-$(document).ready(function(){
+$(function(){
   var $review = $('.review');
-  
+
   $review.on('ajax:beforeSend', function(){
     $(this).find('input').attr('disabled', true);
   });
@@ -14,7 +14,7 @@ $(document).ready(function(){
   });
   
   function replaceButton(container, icon_class, color){
-    $(container).find('input:submit').replaceWith($('<i/>')).addClass(icon_color).css('color', color);
+    $(container).find('input:submit').replaceWith($('<i/>')).addClass('icon_color').css('color', color);
   };
 
   function highlightStars(elem){
@@ -25,7 +25,7 @@ $(document).ready(function(){
   highlightStars($('.review input:checked + label'));
 
   var $stars = $('.review input:enabled ~ label');
-
+  
   $stars.on('mouseenter', function(){
     highlightStars($(this));
   });

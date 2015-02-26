@@ -67,3 +67,25 @@
   color: #AAA;
   &:before {content: "\f006";}
 }
+
+#content .search {
+  float: right;
+  margin: 0;
+  position: relative;
+  &:after {
+    padding: 5px;
+    font-size: 14px;
+    font-family: 'FontAwesome';
+    position: absolute;
+    content: "\f002";
+    color: #BBB;
+    top: 0;
+    right: 0;
+  }
+}
+
+.highlight {
+  font-size: inherit;
+  font-weight: inherit;
+  background-color: blue;
+}

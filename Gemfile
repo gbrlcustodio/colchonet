@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Font Awesome vector icons
 gem 'font-awesome-rails'
 
+# Friendly id for Slugs URLs
+gem 'friendly_id', '~> 5.1.0'
+
 # To use ActiveModel has_secure_password
 gem 'bcrypt', '~>3.1.0'
 

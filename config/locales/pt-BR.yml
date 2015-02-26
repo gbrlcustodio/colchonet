@@ -3,6 +3,9 @@ pt-BR:
     success: Email confirmado com sucesso, obrigado!
   dialogs:
     destroy: Você tem certeza que quer remover?
+  home:
+    new:
+      recently_added: Adicionados Recentemente
   users:
     new:
       title: Cadastrar Usuário
@@ -20,6 +23,9 @@ pt-BR:
   rooms:
     index:
       title: Quartos disponíveis
+      search_results: Resultados da busca
+    search:
+      search_for: Buscar por...
     room:
       owner_html: '&mdash; %{owner} (%{when})'
       edit: Editar

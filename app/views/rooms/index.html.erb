@@ -1,5 +1,11 @@
-<h1><%= t '.title' %></h1>
+<%= render 'search' %>
+
+<h1>
+  <% if @search_query.present? %>
+    <%= t '.search_results' %>
+  <% else %>
+    <h1><%= t '.title' %></h1>
+  <% end %>
+</h1>
 
 <%= render @rooms %>
-
-<%= link_to 'New Room', new_room_path %>
