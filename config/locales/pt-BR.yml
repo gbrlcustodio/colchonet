@@ -24,6 +24,13 @@ pt-BR:
       owner_html: '&mdash; %{owner} (%{when})'
       edit: Editar
       destroy: Remover
+    review_form:
+      login_to_review: Faça o login para avaliar quartos
+    review:
+      stats:
+        zero: Não há avaliações
+        one: (1 avaliação)
+        other: '(%{count} avaliações)'
     new:
       title: Cadastrar Quarto
     edit:
@@ -54,6 +61,7 @@ pt-BR:
     models:
       user: Usuário
       room: Quarto
+      review: Avaliação
     attributes:
       user:
         bio: Biografia

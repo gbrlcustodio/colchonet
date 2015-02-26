@@ -4,12 +4,66 @@
   background-color: white;
   padding: 20px 25px;
   margin-top: 10px;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: blue;
   @include shadow(#CCC, 0, 3px, 6px);
+  
 }
 
 .room h2 {
   display: inline;
   a {
-    font-size: 1.3em;
+    font-size: 1.4em;
+    font-weight: bold;
   }
+}
+
+#content .review {
+  margin: 0;
+  padding: 0;
+  float: right;
+  border: none;
+  position: relative;
+}
+
+.review label i {
+  font-size: 18px;
+  text-shadow: 1px 1px #999;
+  cursor: pointer;
+  color: #CCC;
+}
+
+.icon-star {
+  font-family: 'FontAwesome';   
+  &:before {content: "\f005";}
+}
+
+.review label.toggled i {
+  color: gold;
+}
+
+.review form > input {
+  display: none;
+}
+
+.review .icon-ok,
+.review .icon-remove {
+  position: absolute;
+  right: 0;
+}
+
+.review .star {
+  font-family: 'FontAwesome';
+  font-size: 18px;
+}
+
+.review .filled_star {
+  color: gold;
+  text-shadow: 1px 1px #999;
+  &:before {content: "\f005";}
+}
+
+.review .empty_star {
+  color: #AAA;
+  &:before {content: "\f006";}
 }

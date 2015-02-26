@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Font Awesome vector icons
+gem 'font-awesome-rails'
+
 # To use ActiveModel has_secure_password
 gem 'bcrypt', '~>3.1.0'
 

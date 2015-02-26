@@ -4,7 +4,7 @@ $header-height: 55px;
 $content-width: 700px;
 
 $serif-families: 'Pacifico', 'Georgia', serif;
-$sans-serif-families: 'Helvetica', sans-serif;
+$sans-serif-families: 'Open Sans Condensed', sans-serif; 
 
 $error-text-color: #B94A48;
 $success-text-color: #468847;
@@ -77,6 +77,7 @@ header nav {
   margin: 0 auto;
 
   h1 {
+    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1.5em;
   }
 
@@ -166,4 +167,25 @@ form {
   border: 1px solid $error-text-color;
   @extend .padded_flash;
   background-color: #F2DEDE;
+}
+
+#content .review form {
+  margin: 0;
+}
+
+#content .review {
+  margin: 0;
+  padding: 0;
+  float: right;
+  border: none;
+}
+
+.review label {
+  display: inline;
+}
+
+.review .login_required {
+  font-size:0.8em;
+  color: #666;
+  font-variant: small-caps;
 }
